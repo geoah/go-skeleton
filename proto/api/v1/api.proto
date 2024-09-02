@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package api.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/geoah/go-skeleton/internal/api/v1;apiv1";
+
+service APIService {
+  rpc Ping(PingRequest) returns (PingResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/ping"
+      body: "*"
+    };
+  };
+}
+
+message PingRequest {
+  string message = 1;
+}
+
+message PingResponse {
+  string message = 1;
+}

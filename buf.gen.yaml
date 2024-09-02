@@ -1,0 +1,18 @@
+version: v2
+managed:
+  enabled: true
+  override:
+    - file_option: go_package_prefix
+      value: github.com/geoah/go-skeleton/proto/api/v1
+  disable:
+    - file_option: go_package
+      module: buf.build/googleapis/googleapis
+plugins:
+  # Go plugin
+  - remote: buf.build/protocolbuffers/go:v1.34.0
+    out: ./proto/api/v1
+    opt: paths=source_relative
+  # Go Connect plugin
+  - remote: buf.build/connectrpc/go:v1.16.2
+    out: ./proto/api/v1
+    opt: paths=source_relative

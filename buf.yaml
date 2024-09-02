@@ -1,0 +1,11 @@
+version: v2
+
+deps:
+  - buf.build/googleapis/googleapis
+
+modules:
+  - path: proto/api/v1
+    name: buf.build/go-skeleton/api
+    lint:
+      use:
+        - DEFAULT

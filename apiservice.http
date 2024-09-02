@@ -1,0 +1,15 @@
+### Ping request using REST-style endpoint
+POST http://localhost:8080/api/v1/ping
+Content-Type: application/json
+
+{
+  "message": "Hello, REST!"
+}
+
+### Ping request using Connect protocol (gRPC-style)
+POST http://localhost:8080/api.v1.APIService/Ping
+Content-Type: application/json
+
+{
+  "message": "Hello, Connect!"
+}

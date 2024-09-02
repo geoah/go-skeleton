@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  generate:
+    cmds:
+      - buf dep update
+      - buf generate
+
+  clean:
+    cmds:
+      - rm -rf gen
+
+  default:
+    cmds:
+      - task: generate

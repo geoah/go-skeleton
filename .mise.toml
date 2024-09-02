@@ -1,0 +1,17 @@
+[tools]
+# Required tools
+go = "1.23.0"
+task = "3.37.2"
+
+# Go tools
+"go:github.com/golangci/golangci-lint/cmd/golangci-lint" = "1.57.2"
+"go:github.com/fullstorydev/grpcurl/cmd/grpcurl" = "1.9.1"
+"go:github.com/bufbuild/buf/cmd/buf" = "1.34.0"
+air = "1.52.0"
+
+[env]
+PATH = "${PATH}:${HOME}/go/bin"
+
+[tasks]
+generate = "task generate"
+clean = "task clean"
